@@ -13,7 +13,7 @@ import numpy as np
 #while(1):
 
     # Take each frame
-frame = cv2.imread(r'C:\Users\Harish\Desktop\Plant project\thespartans\.gitignore\test6.jpg')
+frame = cv2.imread(r'C:\Users\Harish\Desktop\Plant project repo\plant-project\code\resize.jpg')
 
     # Convert BGR to HSV
 hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)

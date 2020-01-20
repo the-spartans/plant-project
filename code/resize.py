@@ -10,7 +10,7 @@ img = cv2.imread(r'C:\Users\Harish\Desktop\Plant project repo\plant-project\code
  
 print('Original Dimensions : ',img.shape)
  
-scale_percent = 60 # percent of original size
+#scale_percent = 60 # percent of original size
 #width = int(img.shape[1] * scale_percent / 100)
 #height = int(img.shape[0] * scale_percent / 100)
 width = 300

@@ -15,7 +15,7 @@ Created on Sat Jan 18 19:14:20 2020
 import cv2
 import numpy as np
 
-"cap = cv2.VideoCapture(0)"
+#"cap = cv2.VideoCapture(0)"
 
 #while(1):
 

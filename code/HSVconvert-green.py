@@ -19,7 +19,7 @@ frame = cv2.imread(r'C:\Users\Harish\Desktop\Plant project repo\plant-project\co
 hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     # define range of blue color in HSV
-lower_green = np.array([30,100,100])
+lower_green = np.array([37,100,100])
 upper_green = np.array([70,225,225])
 
     # Threshold the HSV image to get only blue colors

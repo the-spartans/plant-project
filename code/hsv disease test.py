@@ -20,24 +20,28 @@ import numpy as np
 #while(1):
 
     # Take each frame
-frame = cv2.imread(r'C:\Users\Harish\Desktop\Plant project repo\plant-project\code\resize.jpg')
-
+frame_color = cv2.imread(r'C:\Users\Harish\Desktop\Plant project repo\plant-project\code\resize.jpg')
+count_color = 0;
     # Convert BGR to HSV
-hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+hsv = cv2.cvtColor(frame_color, cv2.COLOR_BGR2HSV)
 
     # define range of blue color in HSV
-lower_green = np.array([0,0,0])
-upper_green = np.array([30,225,225])
+lower_color = np.array([0,0,0])
+upper_color = np.array([30,225,225])
 
     # Threshold the HSV image to get only blue colors
-mask = cv2.inRange(hsv, lower_green, upper_green)
-
+mask_color = cv2.inRange(hsv, lower_color, upper_color)
+count_color = np.sum(mask_color == 255)
     # Bitwise-AND mask and original image
-res = cv2.bitwise_and(frame,frame, mask= mask)
+res_color = cv2.bitwise_and(frame_color,frame_color, mask= mask_color)
 
-cv2.imshow('frame',frame)
-cv2.imshow('mask',mask)
-cv2.imshow('res',res)
+print(count_color)
+cv2.imwrite("frame_color.jpg", frame_color)
+cv2.imwrite("mask_color.jpg", mask_color)
+cv2.imwrite("result_color.jpg", res_color)
+cv2.imshow('frame',frame_color)
+cv2.imshow('mask',mask_color)
+cv2.imshow('res',res_color)
 k = cv2.waitKey(5) & 0xFF
 #if k == 27:
  #   break
